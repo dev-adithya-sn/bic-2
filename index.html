@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BiC — Business Innovation Community · VIT Chennai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="BiC is VIT Chennai's Business Innovation Community — home of the DeFy hackathon, TechnoVIT events, and the campus's builders and future founders." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+  </head>
+  <body>
+    <script>
+      // Full-screen error overlay — local debugging only, never shown on the deployed site.
+      (function () {
+      var host = location.hostname;
+      if (!(host === 'localhost' || host === '127.0.0.1' || host === '0.0.0.0' || host === '')) return;
+      window.onerror = function(message, source, lineno, colno, error) {
+        var div = document.createElement('div');
+        div.style.color = 'red';
+        div.style.background = '#1a0000';
+        div.style.position = 'fixed';
+        div.style.inset = '0';
+        div.style.zIndex = '99999';
+        div.style.padding = '20px';
+        div.style.fontFamily = 'monospace';
+        div.style.fontSize = '14px';
+        div.style.overflow = 'auto';
+        div.innerHTML = '<h2>🔴 JavaScript Runtime Error:</h2>' +
+          '<p><b>Message:</b> ' + message + '</p>' +
+          '<p><b>Source:</b> ' + source + ' (Line ' + lineno + ', Col ' + colno + ')</p>' +
+          (error && error.stack ? '<pre><b>Stack:</b> ' + error.stack + '</pre>' : '');
+        document.body.appendChild(div);
+      };
+      window.onunhandledrejection = function(event) {
+        var div = document.createElement('div');
+        div.style.color = 'red';
+        div.style.background = '#1a0000';
+        div.style.position = 'fixed';
+        div.style.inset = '0';
+        div.style.zIndex = '99999';
+        div.style.padding = '20px';
+        div.style.fontFamily = 'monospace';
+        div.style.fontSize = '14px';
+        div.style.overflow = 'auto';
+        div.innerHTML = '<h2>🔴 Unhandled Promise Rejection:</h2>' +
+          '<p><b>Reason:</b> ' + event.reason + '</p>' +
+          (event.reason && event.reason.stack ? '<pre><b>Stack:</b> ' + event.reason.stack + '</pre>' : '');
+        document.body.appendChild(div);
+      };
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
